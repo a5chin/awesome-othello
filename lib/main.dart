@@ -194,6 +194,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget buildBlockUnit(int row, int col) {
+    final Size size = MediaQuery.of(context).size;
+
     return GestureDetector(
         onTap: () {
           setState(() {
@@ -205,24 +207,26 @@ class _MyHomePageState extends State<MyHomePage> {
             color: const Color(0xff27ae60),
             borderRadius: BorderRadius.circular(2),
           ),
-          width: BLOCK_SIZE,
-          height: BLOCK_SIZE,
+          width: size.width / 9,
+          height: size.width / 9,
           margin: const EdgeInsets.all(2),
           child: Center(child: buildItem(table[row][col])),
         ));
   }
 
   Widget buildItem(BlockUnit block) {
+    final Size size = MediaQuery.of(context).size;
+
     if (block.value == ITEM_BLACK) {
       return Container(
-          width: 36,
-          height: 36,
+          width: size.width / 10,
+          height: size.width / 10,
           decoration:
               const BoxDecoration(shape: BoxShape.circle, color: Colors.black));
     } else if (block.value == ITEM_WHITE) {
       return Container(
-          width: 36,
-          height: 36,
+          width: size.width / 10,
+          height: size.width / 10,
           decoration:
               const BoxDecoration(shape: BoxShape.circle, color: Colors.white));
     }
