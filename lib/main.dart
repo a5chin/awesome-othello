@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:othello/block_unit.dart';
 import 'package:othello/coordinate.dart';
 
+import './block_unit.dart';
+import './coordinate.dart';
+
 void main() => runApp(const Othello());
 
 class Othello extends StatelessWidget {
@@ -30,7 +33,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-const double BLOCK_SIZE = 64;
+const double BLOCK_SIZE = 40;
 const int ITEM_EMPTY = 0;
 const int ITEM_WHITE = 1;
 const int ITEM_BLACK = 2;
@@ -212,14 +215,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget buildItem(BlockUnit block) {
     if (block.value == ITEM_BLACK) {
       return Container(
-          width: 60,
-          height: 60,
+          width: 36,
+          height: 36,
           decoration:
               const BoxDecoration(shape: BoxShape.circle, color: Colors.black));
     } else if (block.value == ITEM_WHITE) {
       return Container(
-          width: 60,
-          height: 60,
+          width: 36,
+          height: 36,
           decoration:
               const BoxDecoration(shape: BoxShape.circle, color: Colors.white));
     }
