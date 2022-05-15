@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:othello/block_unit.dart';
+import 'package:othello/coordinate.dart';
 
 import './block_unit.dart';
 import './coordinate.dart';
