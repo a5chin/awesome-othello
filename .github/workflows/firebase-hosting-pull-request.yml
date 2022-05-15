@@ -10,7 +10,7 @@ jobs:
 
     environment:
       name: Deployment
-      url: https://bmicalculator-a5chin.web.app
+      url: https://othello-a5chin.web.app
 
     steps:
       - uses: actions/checkout@v2
